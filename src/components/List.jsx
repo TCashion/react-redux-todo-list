@@ -1,12 +1,12 @@
 const List = (props) => {
-  const { todoItems, toggleComplete, deleteItem } = props;
+  const { todoItems, dispatchToggleCompleted, dispatchDeleteTodo } = props;
 
   function handleButtonClick(todoItemId) {
-    toggleComplete(todoItemId);
+    dispatchToggleCompleted(todoItemId);
   }
 
   function handleDeleteClick(todoItemId) {
-    deleteItem(todoItemId);
+    dispatchDeleteTodo(todoItemId);
   }
 
   return (

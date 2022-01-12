@@ -1,12 +1,11 @@
 import { useRef } from "react";
 
 const ListInput = (props) => {
-  const { addToDo } = props;
+  const { dispatchAddTodo } = props;
   const listInputRef = useRef(null);
 
   function handleClick() {
-    const newTodoItem = listInputRef.current.value;
-    addToDo(newTodoItem);
+    dispatchAddTodo(listInputRef.current.value);
   }
 
   return (
